@@ -1,0 +1,31 @@
+
+#how to set up new git account in R - execute all steps in console
+# which git # type in terminal - have to check or maybe have to update? - it is installed
+library(usethis)
+use_git_config(user.name = "GwenArendse", user.email = "gwendoline.arendse@uct.ac.za")
+
+#get github token by running following function in usethis package in console
+create_github_token()
+
+#install package
+install.packages('gitcreds')
+library(gitcreds)
+
+gitcreds_set() #paste PAT (token generated in here)
+#When you next commit and push, it may still ask you for your github username and password, use your PAT when it asks for your password!! PAT: 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
+#new PAT as of 20 July 2023: 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
+#GIT_TOKEN = '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'
+
+#old ssh-rsa in .Renviron: GIT_SSH_COMMAND = 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCr4cPjjf2ntB1dC1vvzQkqJSgtNWQyizgIWFzH15gGsKb0IiOarl7MpHQS++GMlK4fp2SZ3udi9b2p61wb1RG61EK5Mhh9m0/mLbHoif8rgLMEzdDk9z4aFQOQXTVt5n+neRNOTw3foXF60gyiDE9nml0cJ3rAVh2CpzXa9ykAUyWD/a62+/+MXLtmHK+JFNb8nD1+WE1nEFkLK91id+raH9nueqTb3Zb4URZI/z+g3wCy7q2QHhaH6xQNlet8UXGeYXwTtpS0wKt7jEOrR4qCYB+e8KFG7kuna6OF0J9mICl5ifTrKJje4kEvuSlzhtmqHCouWUFIJd6MCdbDYD789L0DUEEKMuoTFhWEB1ujMUxACPFz+Nv7pna+vR4oWuodGcx4EAgO/Uc4LWFgMZv9RvAKVzKZQVaTeAfBIL417yUf9XLqSjy//yDaHRDo7UD2aGnSlVVJlRh1irueUJrv32RGGTmMiShRRu2XXe7fl3snYLXd9pEcaktcI8Ly3cE= gwen@DESKTOP-I3RLOSN'
+
+# ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDYVs78oVAMspbOr50ucPHxZ3lrXmoJCCsstOhkAfJKxgV3+jmyUwEiOlHb0O+2DryLXkvCTYxogP4XDI9VniHUPlPHYfz5cYjye3Lv9cZhcldNP9F9OSlt1ksN85FY1Ekhve4ZO4EJb0BAyQL7fiAvrE2K+Tjsf6u++UBtPi1qCRjG1bKeg9e5FWFJlh86WrFte8Io/HpAfnBQff7BFIj+LBQ6iegNczhV/jgtTHGFltu+LQklSe75fA9fuVeqnmkahRrqhWQyCnYFk0bzpq19MrhUQq3PDwWdkChxwVM3qAtf4fOBrernp5nNEF3KtRx+ZO48hNU7yhWZf1zcSX8KrAzatikqPMosXRYi8F31/HeJk1luJOL4GMIDiBwP67WcztFekLCQdeZAh4HbRA5a4BSNSnC4GlxldvyZiCH4b93+0D+BJfFFDYx202ZDzEvLAGc6ATVUQ0aAjE0QpuzWmVf8B8eIMUG84J8/SHg70BtD2VUNZOJmzY4tGEPHizc= 'gwendoline.arendse@uct.ac.za'
+
+#GIT_SSH_COMMAND =  SHA256:qhgv/GOfBcNH5A1uKuEYT4KfKzQ05WVw3Dj/wpGAokI gwen@DESKTOP-I3RLOSN
+
+# git config --global user.name "GwenArendse"
+# git config --global user.email "gwendoline.arendse@uct.ac.za"
+
+#first ssh key: SHA256:1KQlWukN4AniCBbwWdO70jKK6qbM8GkEo/hWhIl6PT4
+#next key: SHA256:wyRuc/cxudUS2NYALbzmKAGmK6ntlBNSEXFlG1nCtd8
+#next key: SHA256:qhgv/GOfBcNH5A1uKuEYT4KfKzQ05WVw3Dj/wpGAokI
+#test key: SHA256:4kpJ7XJNuMczCNF6RTaO3Zbcy+IPgcAufusZyhvlv8I
